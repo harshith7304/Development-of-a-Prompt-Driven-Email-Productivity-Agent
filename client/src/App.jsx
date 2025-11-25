@@ -93,7 +93,7 @@ function App() {
                 window.location.reload();
               }
             }}
-            title="Reset Inbox"
+            title="Reset Inbox (Demo Mode)"
             style={{ color: '#ef4444', borderColor: '#ef4444' }}
           >
             <RotateCcw size={18} />
