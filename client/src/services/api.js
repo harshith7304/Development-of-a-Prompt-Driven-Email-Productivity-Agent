@@ -3,11 +3,6 @@ import axios from 'axios';
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 export const getEmails = () => axios.get(`${API_URL}/emails`);
-import axios from 'axios';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
-
-export const getEmails = () => axios.get(`${API_URL}/emails`);
 export const getPrompts = () => axios.get(`${API_URL}/prompts`);
 export const updatePrompts = (prompts) => axios.post(`${API_URL}/prompts`, prompts);
 export const updateApiKey = (newApiKey) => axios.post(`${API_URL}/config`, { newApiKey });
