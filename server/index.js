@@ -77,28 +77,6 @@ app.get('/api/prompts', (req, res) => {
 app.post('/api/prompts', (req, res) => {
   writeJson(PROMPTS_FILE, req.body);
   res.json({ success: true });
-});
-
-// Update API Key (Adds to the rotation list)
-app.post('/api/config', (req, res) => {
-  const { newApiKey } = req.body;
-  if (newApiKey) {
-    // Add new key to the front and use it immediately
-    apiKeys.unshift(newApiKey);
-    currentKeyIndex = 0;
-    groq = new Groq({ apiKey: apiKeys[currentKeyIndex] });
-    res.json({ success: true, message: 'API Key added to rotation and set as active' });
-  } else {
-    res.status(400).json({ error: 'API Key is required' });
-  }
-});
-
-// Process Email (Categorize & Extract Actions)
-app.post('/api/process', async (req, res) => {
-  const { emailId } = req.body;
-  const emails = readJson(INBOX_FILE);
-  const prompts = readJson(PROMPTS_FILE);
-
   const emailIndex = emails.findIndex(e => e.id === emailId);
   if (emailIndex === -1) return res.status(404).json({ error: 'Email not found' });
 

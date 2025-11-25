@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Save, Key } from 'lucide-react';
-import { getPrompts, updatePrompts, updateApiKey } from '../services/api';
+import { Save, Key, RotateCcw } from 'lucide-react';
+import { getPrompts, updatePrompts, updateApiKey, resetInbox } from '../services/api';
 
 const PromptConfig = () => {
     const [prompts, setPrompts] = useState({
@@ -52,6 +52,20 @@ const PromptConfig = () => {
         }
     };
 
+    const handleResetInbox = async () => {
+        if (!confirm('Are you sure you want to reset all classifications? This cannot be undone.')) return;
+        setLoading(true);
+        try {
+            await resetInbox();
+            setMsg('Inbox reset successfully!');
+        } catch (err) {
+            setMsg('Error resetting inbox.');
+        } finally {
+            setLoading(false);
+            setTimeout(() => setMsg(''), 3000);
+        }
+    };
+
     return (
         <div className="glass animate-fade-in" style={{ margin: '2rem', padding: '2rem', borderRadius: '1rem', maxWidth: '800px', width: '100%' }}>
             <h2 style={{ marginBottom: '2rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
@@ -86,6 +100,19 @@ const PromptConfig = () => {
                         Update Key
                     </button>
                 </div>
+            </div>
+
+            <div style={{ marginBottom: '3rem', padding: '1rem', border: '1px solid var(--border-color)', borderRadius: '0.5rem', background: 'rgba(239, 68, 68, 0.1)' }}>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ef4444' }}>
+                    <RotateCcw size={20} />
+                    Reset Data
+                </h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1rem' }}>
+                    Clear all AI classifications and actions. This reverts the inbox to its initial unclassified state. Useful for demos.
+                </p>
+                <button className="btn btn-secondary" onClick={handleResetInbox} disabled={loading} style={{ borderColor: '#ef4444', color: '#ef4444' }}>
+                    Reset Inbox
+                </button>
             </div>
 
             <div>

@@ -45,6 +45,14 @@ This guide will walk you through deploying the AIMail application. We will host 
 5.  **Deploy**: Click "Deploy".
 6.  **Visit**: Once complete, Vercel will give you a live URL for your application!
 
+### How to Redeploy (after changing Environment Variables)
+If you update an Environment Variable (like fixing the API URL), you must redeploy for changes to take effect:
+1.  Go to your **Vercel Project Dashboard**.
+2.  Click the **Deployments** tab.
+3.  Find the latest deployment (top of the list).
+4.  Click the **three dots (⋮)** on the right -> **Redeploy**.
+5.  Click **Redeploy** again in the confirmation modal.
+
 ---
 
 ## Important Notes
