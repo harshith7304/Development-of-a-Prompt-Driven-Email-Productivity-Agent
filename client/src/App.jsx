@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, Search, Sparkles, User } from 'lucide-react';
+import { Menu, Search, Sparkles, User, RotateCcw } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import Inbox from './components/Inbox';
 import EmailDetail from './components/EmailDetail';
@@ -85,6 +85,19 @@ function App() {
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <button
+            className="btn btn-secondary"
+            onClick={async () => {
+              if (confirm('Reset all data?')) {
+                await resetInbox();
+                window.location.reload();
+              }
+            }}
+            title="Reset Inbox"
+            style={{ color: '#ef4444', borderColor: '#ef4444' }}
+          >
+            <RotateCcw size={18} />
+          </button>
           <button
             className={`btn ${agentOpen ? 'btn-primary' : 'btn-secondary'}`}
             onClick={() => setAgentOpen(!agentOpen)}

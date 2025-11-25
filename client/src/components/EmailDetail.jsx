@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, Reply, CheckSquare, Tag, Send, Save, Lightbulb } from 'lucide-react';
+import { Sparkles, Reply, CheckSquare, Tag, Send, Save, Lightbulb, RotateCcw } from 'lucide-react';
 import { processEmail, generateDraft, saveDraft } from '../services/api';
 
 const EmailDetail = ({ email, onUpdateEmail }) => {
@@ -33,8 +33,11 @@ const EmailDetail = ({ email, onUpdateEmail }) => {
 
     if (!email) {
         return (
-            <div className="email-detail glass" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-secondary)' }}>
-                <p>Select an email to view</p>
+            <div className="email-detail glass" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: 'var(--text-secondary)', gap: '1rem' }}>
+                <p style={{ fontSize: '1.2rem' }}>Select an email to view</p>
+                <p style={{ color: '#ef4444', maxWidth: '400px', textAlign: 'center' }}>
+                    Click the <RotateCcw size={14} style={{ display: 'inline', verticalAlign: 'middle' }} /> Reset button in the header to clear all classifications and start fresh.
+                </p>
             </div>
         );
     }
