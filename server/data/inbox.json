@@ -1,0 +1,221 @@
+[
+  {
+    "id": "1",
+    "sender": "boss@company.com",
+    "subject": "Q4 Strategy Meeting - Urgent Updates Required",
+    "body": "Hi Team,\n\nI've reviewed the preliminary deck for the Q4 strategy meeting, and we need to make some significant adjustments before the board review on Friday.\n\n1. The revenue projections for the APAC region seem overly optimistic. Please double-check the conversion rates we're assuming for the new product launch.\n2. We need a more detailed breakdown of the marketing budget. The current slide is too high-level.\n3. The competitive analysis section is missing the latest data on Competitor X's recent acquisition.\n\nPlease have these updates ready by EOD tomorrow. We will do a dry run on Thursday morning.\n\nAlso, remind me to discuss the hiring plan for the engineering team. We need to close those open reqs before the holiday freeze.\n\nThanks,\nBoss",
+    "timestamp": "2023-10-25T09:00:00Z",
+    "read": false,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "2",
+    "sender": "hr@company.com",
+    "subject": "Open Enrollment for Benefits Ends Soon",
+    "body": "Hello Everyone,\n\nThis is a friendly reminder that the open enrollment period for 2024 benefits ends this Friday at 5:00 PM EST.\n\nIf you have not yet made your elections, please log in to the HR portal and do so immediately. Changes cannot be made after the deadline unless you experience a qualifying life event.\n\nNew for this year:\n- Enhanced dental coverage options\n- Increased HSA contribution limits\n- New mental health support resources\n\nIf you have any questions, please attend the virtual Q&A session tomorrow at 2:00 PM or reply to this email.\n\nBest regards,\nHR Team",
+    "timestamp": "2023-10-24T14:30:00Z",
+    "read": true,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "3",
+    "sender": "newsletter@techweekly.com",
+    "subject": "Tech Weekly: The Rise of AI Agents",
+    "body": "This Week in Tech:\n\n1. AI Agents are taking over the workplace. From scheduling meetings to writing code, autonomous agents are becoming the new norm.\n2. The latest VR headset reviews are in, and the results are mixed. Is the metaverse finally here, or is it still a gimmick?\n3. Cybersecurity threats are on the rise. Learn how to protect your organization from the latest phishing attacks.\n\nFeatured Article: How to Build Your Own LLM-Powered Productivity Tool.\n\nClick here to read the full issue.\n\nUnsubscribe | Manage Preferences",
+    "timestamp": "2023-10-23T08:15:00Z",
+    "read": true,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "4",
+    "sender": "project-manager@company.com",
+    "subject": "Project Alpha: Sprint Planning Notes",
+    "body": "Team,\n\nHere are the notes from today's sprint planning session:\n\n- **Goal:** Complete the user authentication module.\n- **Key Tasks:**\n  - Implement JWT validation middleware.\n  - Design the login and registration UI.\n  - Set up the database schema for user profiles.\n- **Blockers:** Waiting on the final designs from the UX team.\n\nAction Items:\n- @Dev1: Start working on the backend API.\n- @Dev2: Coordinate with UX on the design handoff.\n- @QA: Prepare the test plan for the auth flow.\n\nLet's aim to have a demo ready by next Tuesday.\n\nRegards,\nPM",
+    "timestamp": "2023-10-22T16:45:00Z",
+    "read": false,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "5",
+    "sender": "mom@family.com",
+    "subject": "Thanksgiving Plans?",
+    "body": "Hi honey,\n\nJust wanted to check in and see if you've thought about Thanksgiving yet. Are you coming home this year? Your aunt and uncle are visiting from Florida, and it would be great to have everyone together.\n\nLet me know soon so I can start planning the menu. Also, do you still have that dietary restriction? I forget if you're doing keto or vegan or what.\n\nLove,\nMom",
+    "timestamp": "2023-10-21T19:20:00Z",
+    "read": false,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "6",
+    "sender": "client@bigcorp.com",
+    "subject": "Re: Proposal for Q1 Marketing Campaign",
+    "body": "Hi,\n\nThanks for sending over the proposal. We've reviewed it internally and have a few questions.\n\n1. Can you clarify the timeline for the social media rollout? We want to make sure it aligns with our product launch.\n2. The budget for the influencer partnership seems a bit low. Do you have data to support the ROI projections?\n3. We'd like to see more creative concepts for the video ads.\n\nLet's schedule a call for early next week to discuss these points. Ideally Monday afternoon.\n\nBest,\nClient",
+    "timestamp": "2023-10-20T11:10:00Z",
+    "read": true,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "7",
+    "sender": "billing@saas-service.com",
+    "subject": "Invoice #12345 is Overdue",
+    "body": "Dear Customer,\n\nThis is a notification that Invoice #12345 for $99.00 was due on October 15th and is now overdue.\n\nPlease make a payment immediately to avoid service interruption. You can pay online via our portal or call our support line.\n\nIf you have already sent payment, please disregard this notice.\n\nThank you for your business.\n\nBilling Dept",
+    "timestamp": "2023-10-19T10:00:00Z",
+    "read": false,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "8",
+    "sender": "recruiter@competitor.com",
+    "subject": "Opportunity at Innovative Startup",
+    "body": "Hi,\n\nI came across your profile on LinkedIn and was impressed by your experience in full-stack development. We are a stealth-mode startup building the next generation of email productivity tools, and we think you'd be a great fit for our founding engineering team.\n\nWe offer competitive equity, remote work options, and the chance to work with cutting-edge AI technology.\n\nWould you be open to a quick 15-minute chat this week to learn more?\n\nBest,\nRecruiter",
+    "timestamp": "2023-10-18T15:30:00Z",
+    "read": true,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "9",
+    "sender": "system@monitoring.com",
+    "subject": "ALERT: High CPU Usage on Production Server",
+    "body": "Critical Alert:\n\nServer: prod-api-01\nMetric: CPU Usage\nValue: 98%\nThreshold: 90%\nDuration: 15 minutes\n\nImmediate action required. Please investigate the cause of the high load. It might be related to the recent deployment or a spike in traffic.\n\nLogs can be accessed at: https://logs.monitoring.com/prod-api-01\n\n- Ops Team",
+    "timestamp": "2023-10-17T03:45:00Z",
+    "read": false,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "10",
+    "sender": "colleague@company.com",
+    "subject": "Lunch today?",
+    "body": "Hey,\n\nAre you free for lunch around 12:30? A few of us are going to that new taco place down the street. Let me know if you want to join.\n\nAlso, did you see the email from the CEO about the reorganization? Crazy stuff.\n\n- Dave",
+    "timestamp": "2023-10-25T11:00:00Z",
+    "read": true,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "11",
+    "sender": "support@software.com",
+    "subject": "Ticket #5678: Issue Resolved",
+    "body": "Hi,\n\nWe are writing to inform you that your support ticket #5678 regarding the login issue has been resolved.\n\nOur engineering team identified a bug in the session management logic and deployed a fix. You should now be able to log in without any issues.\n\nPlease verify and let us know if you encounter any further problems.\n\nThanks for your patience.\n\nSupport Team",
+    "timestamp": "2023-10-16T13:20:00Z",
+    "read": true,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "12",
+    "sender": "me@company.com",
+    "subject": "Draft: Q1 Goals",
+    "body": "To: manager@company.com\n\nHi,\n\nHere are my proposed goals for Q1:\n\n1. Refactor the legacy codebase to improve performance by 20%.\n2. Mentor two junior developers.\n3. Complete the cloud certification course.\n\nLet me know what you think.\n\n(Draft saved)",
+    "timestamp": "2023-10-26T10:00:00Z",
+    "read": true,
+    "category": "Drafts",
+    "isDraft": true
+  },
+  {
+    "id": "13",
+    "sender": "gym@fitness.com",
+    "subject": "Your Membership Renewal",
+    "body": "Hi Member,\n\nYour annual gym membership is set to expire on November 1st. We hope you've enjoyed your workouts this year!\n\nRenew now to lock in your current rate. Prices are increasing next month.\n\nClick here to renew online.\n\nStay fit,\nGym Management",
+    "timestamp": "2023-10-15T09:00:00Z",
+    "read": true,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "14",
+    "sender": "amazon@orders.com",
+    "subject": "Your package has been delivered",
+    "body": "Hi,\n\nYour package with order #111-222-333 has been delivered to your front porch.\n\nItems:\n1x Wireless Headphones\n1x USB-C Cable\n\nIf you have any issues with your order, please visit our help center.\n\nThanks for shopping with us.",
+    "timestamp": "2023-10-14T18:00:00Z",
+    "read": false,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "15",
+    "sender": "reminder@todo.com",
+    "subject": "Task: Review Code PRs",
+    "body": "You have 3 pending Pull Requests assigned to you that need review.\n\n1. PR #405: Feature/Dark Mode\n2. PR #406: Fix/Login Bug\n3. PR #407: Chore/Update Dependencies\n\nPlease review them by EOD.",
+    "timestamp": "2023-10-25T08:00:00Z",
+    "read": false,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "16",
+    "sender": "reminder@todo.com",
+    "subject": "Task: Prepare Slides for All-Hands",
+    "body": "Don't forget to prepare your slides for the monthly All-Hands meeting next Wednesday. You need to cover the engineering updates and the roadmap for next quarter.\n\nDeadline: Monday morning.",
+    "timestamp": "2023-10-24T09:00:00Z",
+    "read": false,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "17",
+    "sender": "ceo@company.com",
+    "subject": "Company Update: New Funding Round",
+    "body": "Team,\n\nI am thrilled to announce that we have successfully closed our Series B funding round! We raised $50M led by TopTier VC.\n\nThis funding will allow us to accelerate our product roadmap, expand our sales team, and enter new markets.\n\nWe will be holding a special town hall meeting tomorrow at 10:00 AM to discuss what this means for the company and our future.\n\nThank you for all your hard work. This milestone belongs to all of you.\n\nLet's keep building!\n\nCEO",
+    "timestamp": "2023-10-13T10:00:00Z",
+    "read": true,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "18",
+    "sender": "unknown@spam.com",
+    "subject": "You won a prize!",
+    "body": "Congratulations!\n\nYou have been selected as the winner of our grand prize giveaway. Click the link below to claim your $1000 gift card.\n\n[Link]\n\nAct fast, this offer expires in 24 hours!",
+    "timestamp": "2023-10-12T05:00:00Z",
+    "read": false,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "19",
+    "sender": "bank@secure.com",
+    "subject": "Security Alert: Unusual Activity",
+    "body": "We detected a login attempt to your account from an unrecognized device in Russia.\n\nIf this was you, please verify your identity.\nIf not, please change your password immediately and contact our fraud department.\n\nYour security is our top priority.",
+    "timestamp": "2023-10-11T23:00:00Z",
+    "read": false,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  },
+  {
+    "id": "20",
+    "sender": "newsletter@cooking.com",
+    "subject": "5 Easy Weeknight Dinners",
+    "body": "Struggling with what to cook this week? Here are 5 easy and delicious recipes that take less than 30 minutes.\n\n1. One-Pan Lemon Chicken\n2. Spicy Tofu Stir-Fry\n3. Creamy Mushroom Pasta\n4. Beef Tacos with Homemade Salsa\n5. Roasted Vegetable Salad\n\nGet the full recipes on our website.\n\nHappy Cooking!",
+    "timestamp": "2023-10-10T16:00:00Z",
+    "read": true,
+    "isDraft": false,
+    "category": null,
+    "processed": false
+  }
+]

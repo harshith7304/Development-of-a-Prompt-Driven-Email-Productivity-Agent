@@ -1,0 +1,5 @@
+{
+    "categorization": "Categorize emails into exactly one of these categories: Urgent, Work, Personal, To-Do, Spam, Uncategorized. 'Urgent' is for immediate deadlines or crises. 'To-Do' is for emails with clear tasks for the user. 'Spam' is for junk. Respond with just the category name.",
+    "action_item": "Extract tasks from the email. Respond in JSON format: { \"tasks\": [{ \"task\": \"...\", \"deadline\": \"...\" }] }. If no tasks, return { \"tasks\": [] }.",
+    "auto_reply": "If an email is a meeting request, draft a polite reply asking for an agenda. If it's a task, acknowledge it and say I'll get to it. Otherwise, draft a generic polite receipt acknowledgement. Keep it professional and concise."
+}
