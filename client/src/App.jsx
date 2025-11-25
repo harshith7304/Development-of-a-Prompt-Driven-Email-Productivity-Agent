@@ -6,7 +6,7 @@ import EmailDetail from './components/EmailDetail';
 import AgentChat from './components/AgentChat';
 import PromptConfig from './components/PromptConfig';
 import Compose from './components/Compose';
-import { getEmails } from './services/api';
+import { getEmails, resetInbox } from './services/api';
 
 function App() {
   const [activeTab, setActiveTab] = useState('inbox');
@@ -20,7 +20,19 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() => {
-    fetchEmails();
+    const init = async () => {
+      // Demo Mode: Reset inbox on load if ?demo=true is present
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('demo') === 'true') {
+        try {
+          await resetInbox();
+        } catch (e) {
+          console.error("Failed to reset inbox in demo mode", e);
+        }
+      }
+      fetchEmails();
+    };
+    init();
   }, []);
 
   const fetchEmails = async () => {
