@@ -32,23 +32,18 @@ This guide will walk you through deploying the AIMail application. We will host 
 
 ## Part 2: Deploying the Frontend (Client) on Vercel
 
-1.  **Update API URL**:
-    - Before deploying, you need to tell the frontend where the backend lives.
-    - Open `client/src/services/api.js`.
-    - Change `const API_URL = 'http://localhost:3001/api';` to your Render URL:
-      ```javascript
-      const API_URL = 'https://aimail-server.onrender.com/api'; // Replace with your actual Render URL
-      ```
-    - Commit and push this change to GitHub.
-
-2.  **Sign Up/Login**: Go to [Vercel.com](https://vercel.com) and log in with GitHub.
-3.  **Add New Project**: Click "Add New..." -> "Project".
-4.  **Import Repository**: Select your AIMail repository.
-5.  **Configure Project**:
+1.  **Sign Up/Login**: Go to [Vercel.com](https://vercel.com) and log in with GitHub.
+2.  **Add New Project**: Click "Add New..." -> "Project".
+3.  **Import Repository**: Select your AIMail repository.
+4.  **Configure Project**:
     - **Framework Preset**: Vite (should be auto-detected).
     - **Root Directory**: Click "Edit" and select `client`.
-6.  **Deploy**: Click "Deploy".
-7.  **Visit**: Once complete, Vercel will give you a live URL for your application!
+    - **Environment Variables**:
+        - Expand the "Environment Variables" section.
+        - Key: `VITE_API_URL`
+        - Value: `https://aimail-server.onrender.com/api` (Replace with your actual Render URL from Part 1)
+5.  **Deploy**: Click "Deploy".
+6.  **Visit**: Once complete, Vercel will give you a live URL for your application!
 
 ---
 
