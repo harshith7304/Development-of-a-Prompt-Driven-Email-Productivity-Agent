@@ -41,7 +41,7 @@ const makeGroqRequest = async (operation) => {
         console.log(`🔄 Switched to API Key Index: ${currentKeyIndex}`);
         // Loop continues to retry with new key
       } else {
-        // If it's not a rate limit error, throw it immediately
+        console.error("Groq API Error:", JSON.stringify(error, null, 2)); // Enhanced logging
         throw error;
       }
     }
@@ -74,9 +74,22 @@ app.get('/api/prompts', (req, res) => {
 });
 
 // Update Prompts
-// Update Prompts
 app.post('/api/prompts', (req, res) => {
   writeJson(PROMPTS_FILE, req.body);
+  res.json({ success: true });
+});
+
+// Update API Key (Config)
+app.post('/api/config', (req, res) => {
+  const { newApiKey } = req.body;
+  if (!newApiKey) return res.status(400).json({ error: 'API Key is required' });
+
+  // Add new key to the start of the rotation
+  apiKeys.unshift(newApiKey);
+  currentKeyIndex = 0;
+  groq = new Groq({ apiKey: apiKeys[currentKeyIndex] });
+
+  console.log('✅ API Key updated and added to rotation.');
   res.json({ success: true });
 });
 
