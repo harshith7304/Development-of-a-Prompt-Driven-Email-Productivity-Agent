@@ -148,7 +148,7 @@ app.post('/api/chat', async (req, res) => {
   const { message, contextEmailId } = req.body;
   const emails = readJson(INBOX_FILE);
 
-  let systemPrompt = "You are a helpful Email Productivity Agent. You have access to the user's emails. ALWAYS format your responses using Markdown. Use bullet points for lists, bold text for important details (like **Subject** or **From**), and keep responses concise and easy to read.";
+  let systemPrompt = "You are a helpful Email Productivity Agent. You have access to the user's emails. Do NOT use Markdown formatting (no bold, italics, or headers). Use simple plain text. Use dashes (-) for lists and newlines for separation. Keep responses concise and easy to read.";
   let userContent = message;
 
   if (contextEmailId) {
