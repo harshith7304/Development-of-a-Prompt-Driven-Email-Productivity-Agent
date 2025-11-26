@@ -1,5 +1,8 @@
 # AIMail - Prompt-Driven Email Productivity Agent
 
+> **🚀 Live Demo:** [Click here to view the deployed application](https://development-of-a-prompt-driven-emai.vercel.app/)
+
+
 AIMail is a next-generation email client designed to enhance productivity through AI-driven features. It provides a powerful agentic interface to manage your inbox with a modern, familiar design.
 
 ## Key Features
@@ -50,4 +53,4 @@ AIMail is a next-generation email client designed to enhance productivity throug
 
 ## Troubleshooting
 
-- **Agent Not Responding**: Verify your Groq API Key is correct and has credits.
+- **Agent Not Responding**: Verify your Groq API Key is correct and has credits.(it has built in keys but they have limits if crossed you may face issues try changing it in brain & config)
