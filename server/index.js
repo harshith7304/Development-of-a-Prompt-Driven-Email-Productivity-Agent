@@ -148,7 +148,7 @@ app.post('/api/chat', async (req, res) => {
   const { message, contextEmailId } = req.body;
   const emails = readJson(INBOX_FILE);
 
-  let systemPrompt = "You are a helpful Email Productivity Agent. You have access to the user's emails.";
+  let systemPrompt = "You are a helpful Email Productivity Agent. You have access to the user's emails. Keep your answers concise, structured, and easy to read. Use bullet points where possible. Do not be overly verbose.";
   let userContent = message;
 
   if (contextEmailId) {
