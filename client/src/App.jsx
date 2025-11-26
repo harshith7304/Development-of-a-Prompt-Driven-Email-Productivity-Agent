@@ -13,6 +13,7 @@ function App() {
   const [emails, setEmails] = useState([]);
   const [selectedEmailId, setSelectedEmailId] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState('');
 
   // UI State
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
@@ -55,10 +56,25 @@ function App() {
 
   // Filter Emails
   const filteredEmails = emails.filter(e => {
-    if (selectedCategory === 'All') return !e.isDraft;
-    if (selectedCategory === 'Drafts') return e.isDraft;
-    if (selectedCategory === 'Uncategorized') return !e.category && !e.isDraft;
-    return e.category === selectedCategory && !e.isDraft;
+    // 1. Filter by Category
+    let matchesCategory = true;
+    if (selectedCategory === 'All') matchesCategory = !e.isDraft;
+    else if (selectedCategory === 'Drafts') matchesCategory = e.isDraft;
+    else if (selectedCategory === 'Uncategorized') matchesCategory = !e.category && !e.isDraft;
+    else matchesCategory = e.category === selectedCategory && !e.isDraft;
+
+    // 2. Filter by Search Term
+    let matchesSearch = true;
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase();
+      matchesSearch = (
+        e.subject.toLowerCase().includes(term) ||
+        e.sender.toLowerCase().includes(term) ||
+        e.body.toLowerCase().includes(term)
+      );
+    }
+
+    return matchesCategory && matchesSearch;
   });
 
   return (
@@ -80,6 +96,8 @@ function App() {
             type="text"
             className="input-field"
             placeholder="Search mail"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
             style={{ marginBottom: 0, paddingLeft: '3rem', background: 'rgba(30, 41, 59, 0.5)', border: 'none' }}
           />
         </div>
