@@ -38,6 +38,9 @@ const EmailDetail = ({ email, onUpdateEmail }) => {
                 <p style={{ color: '#ef4444', maxWidth: '400px', textAlign: 'center' }}>
                     Click the <RotateCcw size={14} style={{ display: 'inline', verticalAlign: 'middle' }} /> Reset button in the header to clear all classifications and start fresh.
                 </p>
+                <p style={{ color: '#ef4444', maxWidth: '400px', textAlign: 'center', fontSize: '0.9rem', marginTop: '0.5rem' }}>
+                    If you encounter issues, please add your Groq API Key in the <strong>Brain & Config</strong> section.
+                </p>
             </div>
         );
     }
