@@ -47,9 +47,10 @@ const Inbox = ({ emails, selectedEmailId, onSelectEmail, onRefresh, category }) 
                         onClick={handleClassifyAll}
                         title="Classify All Uncategorized"
                         disabled={processingAll}
-                        style={{ padding: '0.4rem' }}
+                        style={{ padding: '0.4rem 0.8rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
                     >
                         <Brain size={16} className={processingAll ? 'spin' : ''} />
+                        <span style={{ fontSize: '0.85rem', fontWeight: 600 }}>Categorize AI</span>
                     </button>
                     <button className="btn btn-secondary" onClick={onRefresh} title="Refresh" style={{ padding: '0.4rem' }}>
                         <RefreshCw size={16} />
