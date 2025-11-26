@@ -53,6 +53,13 @@ If you update an Environment Variable (like fixing the API URL), you must redepl
 4.  Click the **three dots (⋮)** on the right -> **Redeploy**.
 5.  Click **Redeploy** again in the confirmation modal.
 
+### Troubleshooting: "Sign In Required"
+If Vercel asks visitors to sign in to view your site:
+1.  Go to **Settings** -> **Deployment Protection**.
+2.  Find **Vercel Authentication**.
+3.  **Disable** it (toggle it off).
+4.  Click **Save**.
+
 ---
 
 ## Important Notes

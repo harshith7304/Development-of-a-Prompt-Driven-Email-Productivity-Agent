@@ -74,9 +74,18 @@ app.get('/api/prompts', (req, res) => {
 });
 
 // Update Prompts
+// Update Prompts
 app.post('/api/prompts', (req, res) => {
   writeJson(PROMPTS_FILE, req.body);
   res.json({ success: true });
+});
+
+// Process Email (Categorize & Extract)
+app.post('/api/process', async (req, res) => {
+  const { emailId } = req.body;
+  const emails = readJson(INBOX_FILE);
+  const prompts = readJson(PROMPTS_FILE);
+
   const emailIndex = emails.findIndex(e => e.id === emailId);
   if (emailIndex === -1) return res.status(404).json({ error: 'Email not found' });
 
@@ -222,6 +231,18 @@ app.post('/api/emails/draft', (req, res) => {
   emails.unshift(newEmail);
   writeJson(INBOX_FILE, emails);
   res.json({ success: true, email: newEmail });
+});
+
+// Reset Inbox
+app.post('/api/reset', (req, res) => {
+  const emails = readJson(INBOX_FILE);
+  const updatedEmails = emails.map(email => {
+    if (email.isDraft) return email;
+    const { category, actions, processed, ...rest } = email;
+    return rest;
+  });
+  writeJson(INBOX_FILE, updatedEmails);
+  res.json({ success: true });
 });
 
 const PORT = 3001;
